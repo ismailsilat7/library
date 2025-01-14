@@ -252,6 +252,8 @@ input:focus {
 #clear-shelf {
     background-color: #344E41;
     color: #E5E7EB;
+    height: fit-content;
+    align-self: center;
 }
 
 #clear-shelf:hover {
