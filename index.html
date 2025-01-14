@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="./library.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>Library</h1>
+            <button id="clear-shelf">Clear Shelf</button>
+        </div>
+        <div id="shelf">
+            <div class="add">
+                <button id="show-dialog" aria-label="Add New Book">
+                    <img src="./images/add-icon.svg" alt="Add Icon">
+                    <h2>Add New Book</h2>
+                </button>
+                <dialog id="dialog">
+                    <form id="bookForm">
+                        <fieldset>
+                            <legend>Add a New Book</legend>
+                            <div class="inputs">
+                                <label for="title">Title</label>
+                                <input type="text" name="title" id="title" class="book-title" required>
+            
+                                <label for="author">Author</label>
+                                <input type="text" name="author" id="author" class="book-author" required>
+            
+                                <label for="pages">Pages</label>
+                                <input type="number" name="pages" id="pages" class="book-pages" min="1" required>
+            
+                                <label for="read">Have you read the book?</label>
+                                <select name="read" id="read" class="isRead" required>
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                        <div class="form-buttons">
+                            <button type="button" id="cancelBtn">Cancel</button>
+                            <button id="confirmBtn" type="submit">Confirm</button>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+        </div>
+    </div>
+    </style>
+</body>
+</html>
